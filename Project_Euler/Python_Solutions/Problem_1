@@ -1,0 +1,13 @@
+import timeit
+sum = 0
+for i in range(1000):
+  if((i % 3 == 0) | (i % 5 == 0)):
+    sum +=i
+print(sum)   
+
+############################
+
+import numpy as np
+array = np.arange(0,1000)
+bool_array = ((array %3 ==0)| (array%5==0))
+print(np.sum(array[bool_array])) 
